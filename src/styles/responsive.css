@@ -1,0 +1,402 @@
+
+/* Mobile First Responsive Design */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+  /* Typography */
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  /* Header */
+  .nav-menu {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    padding: 2rem 0;
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-smooth);
+    z-index: 999;
+  }
+  
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-menu li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: var(--gradient-primary);
+    margin-top: 0.5rem;
+  }
+  
+  /* Hero */
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Categories */
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Products */
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* About */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-images {
+    order: -1;
+  }
+  
+  .about-img-small {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+  }
+  
+  /* Contact */
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  /* Modals */
+  .modal-content {
+    width: 95%;
+    margin: 1rem;
+  }
+  
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-actions {
+    flex-direction: column;
+  }
+  
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Cart */
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .cart-item-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  /* Testimonials */
+  .testimonial {
+    margin: 1rem 0;
+    padding: 1.5rem;
+  }
+  
+  /* Scroll to top */
+  .scroll-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  section {
+    padding: 2rem 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav {
+    padding: 0.75rem 0;
+  }
+  
+  .nav-brand .logo {
+    font-size: 1.5rem;
+  }
+  
+  .product-card {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  
+  .category-card {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-content p {
+    font-size: 1rem;
+  }
+  
+  .modal-header {
+    padding: 1rem;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-footer {
+    padding: 1rem;
+    flex-direction: column;
+  }
+  
+  .toast {
+    right: 1rem;
+    left: 1rem;
+    transform: translateY(-100px);
+  }
+  
+  .toast.show {
+    transform: translateY(0);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content {
+    gap: 3rem;
+  }
+  
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .about-content {
+    gap: 3rem;
+  }
+  
+  .contact-content {
+    gap: 3rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Print styles */
+@media print {
+  .header,
+  .nav-toggle,
+  .scroll-top,
+  .modal,
+  .floating-elements {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .section-title {
+    font-size: 18pt;
+    color: #000 !important;
+  }
+  
+  .btn {
+    border: 1px solid #000 !important;
+    background: transparent !important;
+    color: #000 !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --text-dark: #000000;
+    --text-light: #333333;
+    --rose-gold: #8B4513;
+    --warm-brown: #654321;
+  }
+  
+  .btn-outline {
+    border-width: 3px;
+  }
+  
+  .nav-link::after {
+    height: 3px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .floating-yarn,
+  .floating-hook {
+    animation: none;
+  }
+  
+  .yarn-ball {
+    animation: none;
+  }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+  /* Will be implemented if dark mode is requested */
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  .hero-content {
+    gap: 2rem;
+  }
+  
+  .modal-content {
+    max-height: 80vh;
+  }
+}
